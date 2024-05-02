@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Unit Plan</h1>
+        <h2>Grade Level: {{ grade_level }}</h2>
+        <h2>Number of Students: {{ num_students }}</h2>
+        <h2>State: {{ state }}</h2>
+        <br>
+        <h2>Lesson Plan</h2>
+        <p>{{ unit_plan }}</p>
+        
+        {% if worksheet_content %}
+        <br>
+        <h2>Worksheet</h2>
+        <p>{{ worksheet_content }}</p>
+        {% endif %}
+
+        {% if fact_sheet_content %}
+        <br>
+        <h2>Fact Sheet</h2>
+        <p>{{ fact_sheet_content }}</p>
+        {% endif %}
+
+        {% if answer_bank_content %}
+        <br>
+        <h2>Answer Bank</h2>
+        <p>{{ answer_bank_content }}</p>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
